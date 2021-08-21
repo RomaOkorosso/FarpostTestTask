@@ -106,7 +106,7 @@ csrc/
 
 # Log file - the following switch allows to specify the file that will be
 # used to write all messages from simulation:  -l <filename>
-*.log
+# *.log
 
 # Coverage results (generated with urg) and database location.  The
 # following switch can also be used:  urg -dir <coverage_directory>.vdb
@@ -289,6 +289,7 @@ nbdist/
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
+.idea/
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
