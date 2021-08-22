@@ -72,16 +72,11 @@ class Analyzer
                 }
                 $curr_time = str_replace("[", "", $data[3]);
 
-                //echo $start_time . "\n" . $prev_time . "\n" . $curr_time . "\n\n";
-
-
                 if (($response_code >= MIN_RESPONSE_CODE && $response_code < MAX_RESPONSE_CODE) || ($process_time > $allowed_process_time)) {
-                    //echo "\nYES\n";
                     $response_with_errors++;
                     $uptime_with_errs_percents = 100 - ($response_with_errors / $response_count) * 100;
 
                 } else if ($uptime_with_errs_percents < $min_uptime_percents) {
-                    //echo "\nNO\n";
                     $result = strval($start_time . " " . $prev_time . " " . $uptime_with_errs_percents . "\n");
                     if (!$is_test) {
                         echo $result;
@@ -104,8 +99,4 @@ class Analyzer
         return $to_return;
     }
 }
-
-Analyzer::analyze($min_uptime_percents, $allowed_process_time, false, "test6.log");
-
-//Analyzer::analyze($min_uptime_percents, $allowed_process_time, true, "test2.log");
 
