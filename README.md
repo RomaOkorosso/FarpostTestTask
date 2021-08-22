@@ -2,6 +2,8 @@
 
 ### *Required PHP 7.4 or latest
 
+### FOR STANDART USING:
+
 To install composer use:
 
 1. ``php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"``
@@ -13,4 +15,10 @@ To install phpunit use `php composer.phar install`
 
 For starting use `cat <filename> | php analyze.php -u <min uptime percents> -t <max response time ms>`
 
+* Change filename `in docker-compose.yml` if you need to storage logs in other file or change it path
+
 To start tests use `vendor/bin/phpunit Test.php` or `phpunit Test.php` (depends on phpunit location)
+
+### FOR DOCKER USING
+
+use `docker-compose up -d`

@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  logs-analyzer-php-environment:
+    build: .
+    container_name: logs-analyzer-php
+    image: php:7.4-apache
+    volumes:
+      - ./access.log
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: 8000
+      restart: always
